@@ -7,6 +7,7 @@ from flask_restful import Resource, Api
 from .Users import Users
 from resources.Users import db
 from passlib.apps import custom_app_context as pwd_context
+from flask import abort
 
 #Endpoint to make user
 
@@ -26,19 +27,22 @@ class userCreation(Resource):
 			_userEmail = args['email']
 			_userPassword = args['password']
 			_departmentNumber = args['dept_no']
-			
-			verification = Users.query.filter_by(email =_userEmail).first()
+			if _userEmail is None or _userPassword is None:
+				abort(409)
 
+			verification = Users.query.filter_by(email =_userEmail).first()
+			
 			#Unique emails
 			if verification is not None:
-				return jsonify('Email is already in use')
+				abort(400)
 
 			# The custom_app_context object is an easy to use option 
 			# based on the sha256_crypt hashing algorithm.
 
-			_userPassword = pwd_context.encrypt(_userPassword) 
+			# _userPassword = pwd_context.encrypt(_userPassword) 
 
 			newUser = Users(_firstName, _lastName, _departmentNumber, _userEmail, _userPassword)
+			newUser.hash_password(_userPassword)
 			db.session.add(newUser)
 			db.session.commit()
 			return jsonify('success')

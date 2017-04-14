@@ -1,6 +1,7 @@
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.exc import SQLAlchemyError
 from flask_sqlalchemy import SQLAlchemy
+from passlib.apps import custom_app_context as pwd_context
 
 #Typical user
 
@@ -22,6 +23,12 @@ class Users(db.Model): # Had to match up name with database name
    		self.dept_no = departmentNumber
    		self.email = email
    		self.password = password
+
+   	def hash_password(self, password):
+   		self.password = pwd_context.encrypt(password1)
+   	
+   	def verify_password(self, password1):
+   		return pwd_context.verify(password1, self.password)
 
 	def __repr__(self):
 		return '<User %r>' % self.first_name
