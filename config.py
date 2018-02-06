@@ -5,4 +5,4 @@ SQLALCHEMY_TRACK_MODIFICATIONS = False
 
 
 #Database
-SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://root:student33@localhost/Portal'
+SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://yourSqldataset'
