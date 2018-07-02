@@ -7,6 +7,7 @@ This installation guide is for use on your own server, realistically users will 
  
 There are several components to install. For the portal’s components to run several python packages need to be installed  as well as nodejs. For the the python packages install through pip using the command: 
 - sudo pip install -r requirements.txt 
+
 The text file contains the necessary packages.
  
 Firstly a database is needed, and a database called ‘Portal’. Using the python script Database_Setup.py with your config, the database setup is complete (using MySQL database). From the diagram below you can make out my config for the MySQL database in the mysql.connecter, change the connecter based on your config.
