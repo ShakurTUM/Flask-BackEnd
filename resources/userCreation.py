@@ -4,8 +4,8 @@ from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.exc import SQLAlchemyError
 from flask import Flask
 from flask_restful import Resource, Api
-from .Users import Users
-from resources.Users import db
+from .database import Users
+from resources.database import db
 from passlib.apps import custom_app_context as pwd_context
 from flask import abort
 
@@ -42,6 +42,9 @@ class userCreation(Resource):
 			# _userPassword = pwd_context.encrypt(_userPassword) 
 
 			newUser = Users(_firstName, _lastName, _departmentNumber, _userEmail, _userPassword)
+
+			newUser.activate() # Activates user 
+
 			newUser.hash_password(_userPassword)
 			db.session.add(newUser)
 			db.session.commit()
