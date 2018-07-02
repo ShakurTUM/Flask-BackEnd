@@ -23,4 +23,6 @@ After the database is setup, the python backend can be initialised. The backend 
 
 ![alt text](https://github.com/lennono/Flask-BackEnd/blob/master/pics/Python_server.png)
 
+ 
+
 
