@@ -16,4 +16,11 @@ Firstly a database is needed, and a database called ‘Portal’. Using the pyth
 ![alt text](https://github.com/lennono/Flask-BackEnd/blob/master/pics/Database.png)
 
 
+After the script is run the tables will be created with the columns in the above image. 
+ 
+After the database is setup, the python backend can be initialised. The backend has been constructed in such a way that the only command needed is python app.py to run the app's entry point. After the command is run the server should be running as
+
+
+![alt text](https://github.com/lennono/Flask-BackEnd/blob/master/pics/Python_server.png)
+
 
