@@ -13,4 +13,7 @@ The text file contains the necessary packages.
 Firstly a database is needed, and a database called ‘Portal’. Using the python script Database_Setup.py with your config, the database setup is complete (using MySQL database). From the diagram below you can make out my config for the MySQL database in the mysql.connecter, change the connecter based on your config.
 
 
+![alt text](https://github.com/lennono/Flask-BackEnd/blob/master/pics/Database.png)
+
+
 
