@@ -6,7 +6,7 @@ from resources.database import db
 from resources.errors import errors
 from flask_restful.utils import cors
 from flask_cors import CORS, cross_origin
-#from sendgrid import *
+
 
 
 
