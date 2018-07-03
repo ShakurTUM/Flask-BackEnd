@@ -13,7 +13,6 @@ from flask_cors import CORS, cross_origin
 
 app = Flask(__name__)
 cors = CORS(app, resources={r"/*": {"origins": "http://localhost:3000/*"}}, supports_credentials=True)
-#app.config['SQLALCHEMY_DATABASE_URI'] ='mysql+pymysql://root:student33@localhost/Portal'
 app.config.from_object('config')
 api = Api(app, errors=errors, catch_all_404s=True)
 db = SQLAlchemy(app)
