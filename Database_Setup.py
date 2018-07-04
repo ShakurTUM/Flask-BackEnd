@@ -32,7 +32,7 @@ TABLES['files'] = (
     "  PRIMARY KEY (`fileId`)"
     ") ENGINE=InnoDB")
 
-cnx = mysql.connector.connect(user='root', password='student33', host='127.0.0.1')
+cnx = mysql.connector.connect(Your details)
 cursor = cnx.cursor()
 
 def create_database(cursor):
