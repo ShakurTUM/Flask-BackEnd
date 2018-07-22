@@ -17,7 +17,7 @@ app.config.from_object('config')
 api = Api(app, errors=errors, catch_all_404s=True)
 db = SQLAlchemy(app)
 
-#from resources.Users import Users
+
 from resources.userCreation import userCreation
 from resources.userDetails import userDetails
 from resources.verifyUser import verifyUser
