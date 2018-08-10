@@ -22,8 +22,8 @@ class download(Resource):
 			args = parser.parse_args()
 			_filename = args['filename']
 
-			AWS_ACCESS_KEY_ID = 'AKIAJIZCGRMWJ6QJZINA'
-			AWS_SECRET_ACCESS_KEY = 'XC/WHWLBNS8YsgJILhPJWRTsGDaFY6jUOCts0w2I'
+			AWS_ACCESS_KEY_ID = 'Your ID'
+			AWS_SECRET_ACCESS_KEY = 'Your key'
 
 			bucket_name = 'adaptcentre'
 
